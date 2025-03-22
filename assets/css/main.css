@@ -155,6 +155,7 @@ input, select, textarea {
 		a:hover {
 			border-bottom-color: transparent;
 		}
+		
 
 	strong, b {
 		color: #ffffff;
@@ -218,7 +219,7 @@ input, select, textarea {
 	}
 
 	h6 {
-		font-size: 0.6rem;
+		font-size: 0.5rem;
 	}
 
 	@media screen and (max-width: 736px) {
@@ -1653,3 +1654,226 @@ input, select, textarea {
 		body.is-preload #footer {
 			opacity: 0;
 		}
+
+.modal {
+    display: none; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); 
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: rgba(27, 31, 34, 0.85); 
+    padding: 1rem 2rem; 
+    border-radius: 4px; 
+    text-align: center;
+    width: 56%; 
+    max-width: 350px; 
+    min-height: 105px;
+    box-shadow: none; 
+    border: 2px solid white; 
+    animation: fadeIn 0.4s ease-out;
+    position: relative;
+}
+
+.modal-content p {
+    color: white;
+	font: inherit;
+    font-size: 0.84rem; 
+    font-weight: 600;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.checkmark {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.checkmark svg {
+    width: 50px;
+    height: 50px;
+}
+
+.checkmark-circle {
+    stroke: #4caf50;
+    stroke-width: 2;
+    stroke-dasharray: 166;
+    stroke-dashoffset: 166;
+    animation: stroke 0.6s ease-in-out forwards;
+}
+
+.checkmark-check {
+    stroke: #4caf50;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-dasharray: 48;
+    stroke-dashoffset: 48;
+    animation: dash 0.5s ease-in-out forwards 0.6s;
+}
+
+@keyframes stroke {
+    100% { stroke-dashoffset: 0; }
+}
+
+@keyframes dash {
+    100% { stroke-dashoffset: 0; }
+}
+
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+}
+
+.modal-close:hover {
+    color: #f44336;
+}
+
+.skills-container {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 2rem;
+	justify-content: space-between;
+}
+
+
+.skill-category {
+	flex: 1 1 45%; 
+	margin-bottom: 1rem;
+}
+
+.skill-category h6 {
+	margin-bottom: 0.5rem;
+}
+
+.skill-icons {
+	list-style: none;
+	padding-top: 15px;
+	padding-left: 10px;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	background-color: rgba(27, 31, 34, 0.85);
+	border-radius: 4px;
+	text-align: center;
+	animation: fadeIn 0.4s ease-out;
+	position: relative;
+	font-size: 30px;
+	justify-content: center;
+}
+
+.skill-icons li {
+	transition: transform 0.4s ease-in-out; 
+  }
+  
+  .skill-icons li:hover {
+	transform: scale(1.2); 
+  }
+  
+  
+a.link {
+	text-decoration: none; 
+	transition: transform 0.2s ease; 
+  }
+  
+  a.link:hover {
+	transform: scale(1.1); 
+	cursor: pointer; 
+  }
+  
+.skill-icons li {
+	width: 100px; 
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.skill-icons i {
+	margin-bottom: 5px;
+}
+
+.titulo-habilidades {
+	text-align: center;
+}
+
+@media (max-width: 768px) {
+  .skills-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .skill-category {
+    flex: 1 1 100%;
+  }
+  
+
+  .skill-icons li {
+    width: 80px; 
+  }
+}
+
+.timeline {
+	position: relative;
+	padding: 20px 0;
+	margin: 20px 0;
+	border-left: 2px solid #ccc;
+  }
+  
+  .timeline-item {
+	position: relative;
+	padding-left: 40px;
+	margin-bottom: 20px;
+  }
+  
+  .timeline-item::before {
+	content: "";
+	position: absolute;
+	left: -11px;
+	top: 5px;
+	width: 20px;
+	height: 20px;
+	background: #fff;
+	border: 2px solid #ccc;
+	border-radius: 50%;
+  }
+  
+  .timeline-item .date {
+	font-size: 0.9em;
+	color: #999;
+	display: block;
+	margin-bottom: 5px;
+  }
+
+  .link {
+	display: inline-block; 
+	-moz-transition: transform 0.1s ease-in-out;
+	-webkit-transition: transform 0.1s ease-in-out;
+	-ms-transition: transform 0.1s ease-in-out;
+	transition: transform 0.1s ease-in-out;
+	border-bottom: none;     
+	text-decoration: none;   
+
+  }
+  
+  .link:hover {
+	transform: scale(0.1); 
+	cursor: pointer;       
+  }
+  
